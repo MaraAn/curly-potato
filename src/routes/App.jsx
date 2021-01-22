@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from '../containers/Home';
+
 import Checkout from '../containers/Checkout';
+import Home from '../containers/Home';
 import Information from '../containers/Information';
+import Layout from '../componenets/Layout';
+import NotFound from '../containers/NotFound';
 import Payment from '../containers/Payment';
 import Success from '../containers/Success';
-import NotFound from '../containers/NotFound';
-import Layout from '../Layout';
 
 const App = () => {
   return (
