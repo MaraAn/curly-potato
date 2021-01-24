@@ -8,7 +8,7 @@ const Product = ({ product, handleAddToCart }) => {
         className='Products-item-image'
         src={product.image}
       />
-      <div className='Product-item-info'>
+      <div className='Products-item-info'>
         <h2>
           {product.title}
           <span>
@@ -19,7 +19,13 @@ const Product = ({ product, handleAddToCart }) => {
         </h2>
         <p>{product.description}</p>
       </div>
-      <button type='button' onClick={handleAddToCart(product)}>Comprar</button>
+      <button
+        classsName='Products-item-add'
+        onClick={handleAddToCart(product)}
+        type='button'
+      >
+        <i className='fas fa-plus' />
+      </button>
     </div>
   );
 }
