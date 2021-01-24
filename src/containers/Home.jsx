@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Products from '../componenets/Products'
+import Products from '../components/Products'
 import initialState from '../initialState'
 
 const Home = () => {

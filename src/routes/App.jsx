@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Checkout from '../containers/Checkout';
 import Home from '../containers/Home';
 import Information from '../containers/Information';
-import Layout from '../componenets/Layout';
+import Layout from '../components/Layout';
 import NotFound from '../containers/NotFound';
 import Payment from '../containers/Payment';
 import Success from '../containers/Success';
