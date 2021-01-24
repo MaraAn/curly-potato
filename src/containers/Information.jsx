@@ -5,7 +5,7 @@ import '../styles/containers/Information.css';
 
 const Information = () => {
   return (
-<div className="Information">
+    <div className="Information">
       <div className="Information-content">
         <div className="Information-head">
           <h2>Informacion de contacto:</h2>

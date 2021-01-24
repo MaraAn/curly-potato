@@ -6,7 +6,7 @@ const Payment = () => {
   return (
     <div className="Payment">
       <div className="Payment-content">
-        <h3>Resument del pedido:</h3>
+        <h3>Resumen del pedido:</h3>
         <div className="Payment-button">
           Boton de pago con Paypal
         </div>
