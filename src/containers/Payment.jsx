@@ -11,7 +11,6 @@ const Payment = () => {
           Boton de pago con Paypal
         </div>
       </div>
-      <div />
     </div>
   );
 }
