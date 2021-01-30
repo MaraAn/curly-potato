@@ -4,10 +4,9 @@ import { PayPalButton } from 'react-paypal-button';
 import { useHistory } from 'react-router-dom';
 
 import Context from '../context/Context';
+import handleSumTotal from '../utils/sum';
 
 import '../styles/containers/Payment.css';
-
-const ppt = require('../token/config-paypal.json')
 
 const Payment = () => {
   const { state, addNewOrder } = useContext(Context);
@@ -15,7 +14,7 @@ const Payment = () => {
   const history = useHistory();
 
   const paypalOtions = {
-    clientId: ppt,
+    clientId: 'AVuVCQJTkmlaXqXFs0ZSCYL-h7y7X9bQQ65MCFLf5TxlGbVoh7d0NZtnolKbcRgpzUpILFRlNmFP-n1q',
     intent: 'capture',
     currency: 'USD'
   }
@@ -36,12 +35,6 @@ const Payment = () => {
       addNewOrder(newOrder);
       history.push('/checkout/success')
     }
-  }
-
-  const handleSumTotal = () => {
-    const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
-    const sum = cart.reduce(reducer, 0);
-    return sum;
   }
 
   return (
