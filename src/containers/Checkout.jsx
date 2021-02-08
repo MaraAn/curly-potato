@@ -10,21 +10,21 @@ const Checkout = () => {
   const { state, removeFromCart } = useContext(Context);
   const { cart } = state;
 
-  const handleRemove = product => () => {
-    removeFromCart(product)
+  const handleRemove = (product, i) => () => {
+    removeFromCart(product, i);
   }
 
   return (
     <div className='Checkout'>
       <div className='Checkout-content'>
         {cart.length > 0 ? <h3>Lista de pedidos:</h3> : <h3>Sin pedidos...</h3> }
-        {cart.map((item) => (
+        {cart.map((item, i) => (
           <div className='Checkout-item'>
             <div className='Checkout-element'>
               <h4>{item.title}</h4>
               <span>{`$ ${item.price}`}</span>
             </div>
-            <button type='button' onClick={handleRemove(item)}>
+            <button type='button' onClick={handleRemove(item, i)}>
               <i className='fas fa-trash' />
             </button>
           </div>
